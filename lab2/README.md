@@ -20,6 +20,8 @@ cat ~/.ssh/id_rsa.pub
 Теперь необходимо перейти **в аккаунт на Github (можно создать новый аккаунт или использовать существующий)** и добавить выведенный в терминал публичный SSH-ключ в настройки аккаунта (Settings -> SSH and GPG keys), указав также необходимый заголовок.
 Проверить возможность доступа можно командой:
 
+![Добавление SSH-ключа в настройках GitHub](https://raw.githubusercontent.com/Nelson789/4_labs_for_system/master/lab2/Add%20SSH%20key%20-%20GitHub%20Settings.png)
+
 ```bash
 # проверяем подключение к GitHub
 ssh -vT git@github.com

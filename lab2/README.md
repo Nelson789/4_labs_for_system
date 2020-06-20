@@ -184,6 +184,6 @@ rosinstall_generator desktop_full --rosdistro melodic --deps --tar > melodic-des
 
 ![Script in nano](https://raw.githubusercontent.com/Nelson789/4_labs_for_system/master/lab2/Screenshot%20from%202020-06-19%2013-03-07.png)
 
-![Глобальные параметры Git](https://raw.githubusercontent.com/Nelson789/4_labs_for_system/master/lab2/Screenshot%20from%202020-06-19%2012-55-16.png)
+![Глобальные параметры Git](https://raw.githubusercontent.com/Nelson789/4_labs_for_system/master/lab2/Screenshot%20from%202020-06-19%2013-05-17.png)
 
 ![Log Git](https://raw.githubusercontent.com/Nelson789/4_labs_for_system/master/lab2/Screenshot%20from%202020-06-19%2013-02-34.png)

@@ -170,10 +170,6 @@ rosinstall_generator desktop_full --rosdistro melodic --deps --tar > melodic-des
 
 ----------------
 
-
-Теперь попробуем установить проект из репозитория GitHub посредством терминала 
-Ссылка на репозиторий:  https://github.com/ros/ros
-
 Стандартная установка программы в Ubuntu в большинстве случаев приводит к установке её в директорию /usr, но сама программа находится не в одной папке, а разделена на части:
 /usr/bin - исполняемые файлы программ
 /usr/sbin - исполняемые файлы программ, которые запускаются с правами администратора
@@ -181,3 +177,13 @@ rosinstall_generator desktop_full --rosdistro melodic --deps --tar > melodic-des
 /usr/share - остальные файлы программы
 
 Однако некоторые разработчики предпочитают установку в директорию /opt не разделяя файлы.
+
+--------
+
+В итоге по указанным выше командам собираем bash-скрипт и отправляем его в данный репозиторий, незабывая указать глобальные параметры для Git.
+
+![Script in nano](https://raw.githubusercontent.com/Nelson789/4_labs_for_system/master/lab2/Screenshot%20from%202020-06-19%2013-03-07.png)
+
+![Глобальные параметры Git](https://raw.githubusercontent.com/Nelson789/4_labs_for_system/master/lab2/Screenshot%20from%202020-06-19%2012-55-16.png)
+
+![Log Git](https://raw.githubusercontent.com/Nelson789/4_labs_for_system/master/lab2/Screenshot%20from%202020-06-19%2013-02-34.png)

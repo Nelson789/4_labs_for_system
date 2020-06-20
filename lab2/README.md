@@ -27,6 +27,8 @@ cat ~/.ssh/id_rsa.pub
 ssh -vT git@github.com
 ```
 
+![Проверка доступа к аккаунту GitHub по SSH](https://raw.githubusercontent.com/Nelson789/4_labs_for_system/master/lab2/Screenshot%20from%202020-06-19%2012-59-14.png)
+
 В соответствии с этим, при необходимости работы от root-пользователя, ему также потребуется добавить созданный SSH-ключ для доступа к аккаунту GitHub. Можно выполнить ряд команд для обновления и вывода информации о дистрибутиве и пакетах.
 
 ```bash
@@ -40,6 +42,8 @@ python -V
 pip -V
 git --version
 ```
+
+![вывод информации](https://raw.githubusercontent.com/Nelson789/4_labs_for_system/master/lab2/Screenshot%20from%202020-06-19%2004-46-41.png)
 
 -------
 

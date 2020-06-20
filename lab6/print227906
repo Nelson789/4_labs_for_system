@@ -1,0 +1,65 @@
+#!/bin/bash
+
+
+_r=4.712	# pi * 3/4
+_l=1.57		# pi * 1/2
+_f=3.1415
+x0=1
+y0=7
+
+function gotoxy() { echo "run abs with: $1, $2."; rosservice call /turtle1/teleport_absolute $1 $2 0 ; }
+function move() { echo "run rel with: $1, $2."; rosservice call /turtle1/teleport_relative $1 $2; }
+function turnOff() { rosservice call /turtle1/set_pen 255 255 255 1 1; } 
+function turnOn() { rosservice call /turtle1/set_pen 200 210 125 3 0; }
+
+function draw0() { 
+	lin0=(1 2 1 2); ang0=(0 $_r $_r $_r)
+	turnOn # make pencil ON
+ 	for i in ${!lin0[@]};do
+	move ${lin0[$i]} ${ang0[$i]}; done	# draw number 
+}
+
+function draw2() {
+	lin2=(1 1 1 1 1); ang2=(0 $_r $_r $_l $_l )
+	turnOn # make pencil ON
+	for i in ${!lin2[@]};do
+	move ${lin2[$i]} ${ang2[$i]}; done	# draw number 
+}
+
+function draw7() {
+	lin7=(1 2); ang7=(0 $_r)
+	turnOn # make pencil ON
+	for i in ${!lin7[@]};do
+	move ${lin7[$i]} ${ang7[$i]}; done	# draw number 
+}
+
+
+function draw6() {
+	lin6=(1 1 2 1 1 1); ang6=(0 $_f $_l $_l $_l $_l )
+	turnOn # make pencil ON
+	for i in ${!lin6[@]};do
+	move ${lin6[$i]} ${ang6[$i]}; done	# draw number 
+}
+
+function draw9() {
+	lin9=(1 1 1 1 1 1 1 1); ang9=(0 $_r $_r $_r $_f $_l $_r $_r )
+	turnOn # make pencil ON
+	for i in ${!lin9[@]};do
+	move ${lin9[$i]} ${ang9[$i]}; done	# draw number 
+}
+
+function main() {
+	# ___main___
+	# draw number 227906
+	x0=1;turnOff; gotoxy $x0 $y0; draw2		# 1 number
+	x0=2.5;turnOff; gotoxy $x0 $y0; draw2		# 2 number
+	x0=4;turnOff; gotoxy $x0 $y0; draw7		# 3 number
+	x0=5.5;turnOff; gotoxy $x0 $y0; draw9		# 4 number
+	x0=7;turnOff; gotoxy $x0 $y0; draw0		# 5 number
+	x0=8.5;turnOff; gotoxy $x0 $y0; draw6		# 6 number
+}
+
+if [[ ${FUNCNAME[0]} == "main" ]] ; then
+	main
+fi
+

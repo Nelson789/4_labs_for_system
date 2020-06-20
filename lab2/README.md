@@ -84,6 +84,8 @@ sudo apt install ros-melodic-desktop
 sudo apt install ros-melodic-desktop-full
 ```
 
+![Установка ROS Melodic Base](https://raw.githubusercontent.com/Nelson789/4_labs_for_system/master/lab2/Screenshot%20from%202020-06-19%2004-26-37.png)
+
 **Конфигурируем окружение**
 ROS была установлена в `/opt/ros/<distro>` (в данном случае в `/opt/ros/melodic`). Для более удобного выполнения команд из терминала, необходимо добавить в оболочку путь к директории ROS:
 
@@ -109,6 +111,8 @@ source ~/.bashrc
 ```bash
 roscore
 ```
+
+![Запуск roscore](https://raw.githubusercontent.com/Nelson789/4_labs_for_system/master/lab2/Screenshot%20from%202020-06-19%2012-55-16.png)
 
 Откроем новый терминал и выполним команду:
 

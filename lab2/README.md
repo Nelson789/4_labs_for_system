@@ -128,45 +128,99 @@ rosnode list
 Процесс установки подробно описан по ссылке:
 http://wiki.ros.org/melodic/Installation/Source
 
-1. Установим необходимые пакеты:
+Установим необходимые пакеты:
+
+```bash
 sudo apt-get install python-rosdep python-rosinstall-generator python-vcstool python-rosinstall build-essential
-2. Инициализируем rosdep
+```
+
+Инициализируем rosdep
+
+```bash
 sudo rosdep init
 rosdep update
-3. Соберем пакеты ядра ROS (core ROS packages)
-3.1. Создадим рабочее постранство catkin workspace
+```
+
+**Соберем пакеты ядра ROS (core ROS packages)**
+
+Создадим рабочее постранство catkin workspace
+
+```bash
 mkdir ~/ros_catkin_ws
 cd ~/ros_catkin_ws
+```
+
 Для получения и сборки ядра используем vcstool, что представляет собой утилиту для создания рабочего пространства с использованием различных систем контроля версий:
+
+```bash
 rosinstall_generator desktop --rosdistro melodic --deps --tar > melodic-desktop.rosinstall
 mkdir src
 sudo apt-get install python3-vcstool
 vcs import src < melodic-desktop.rosinstall
-3.2. Для получения всех зависимых пакетов используем:
-rosdep install --from-paths src --ignore-src --rosdistro melodic -y
-Данная команда просмотрит пакеты в директории src и рекурсивно установит все необходимые для них зависимости.
-3.3. Теперь мы можем используя catkin провести сборку пакетов:
-./src/catkin/bin/catkin_make_isolated --install -DCMAKE_BUILD_TYPE=Release
-Пакеты были установлены в директорию ~/ros_catkin_ws/install_isolated
-Был создан файл setup.bash. Для создания требуемых утилит используем:
- 
+```
 
-3.4. Проверим установку запустив ROS:
+Для получения всех зависимых пакетов используем:
+
+```bash
+rosdep install --from-paths src --ignore-src --rosdistro melodic -y
+```
+
+Данная команда просмотрит пакеты в директории src и рекурсивно установит все необходимые для них зависимости.
+
+Теперь мы можем используя catkin провести сборку пакетов:
+
+```bash
+./src/catkin/bin/catkin_make_isolated --install -DCMAKE_BUILD_TYPE=Release
+```
+
+Пакеты были установлены в директорию ~/ros_catkin_ws/install_isolated
+Был создан файл `setup.bash`. 
+ 
+Проверим установку запустив ROS:
+
+```bash
 roscore
+```
+
 ------------------------------------------------------
-4. Для обновления рабочей среды используем следующие команды:
+
+**Обновление рабочей среды**
+
 Для начала переместим текущие файлы в папку .old
- mv -i melodic-desktop-full.rosinstall melodic-desktop-full.rosinstall.old
- Получим обновленные пакеты
+
+```bash
+mv -i melodic-desktop-full.rosinstall melodic-desktop-full.rosinstall.old
+```
+
+Получим обновленные пакеты
+
+```bash
 rosinstall_generator desktop_full --rosdistro melodic --deps --tar > melodic-desktop-full.rosinstall
+```
+
 Сравним с предыдущими:
- diff -u melodic-desktop-full.rosinstall melodic-desktop-full.rosinstall.old
- И если изменения будут нас устраивать, то обновим:
+
+```bash
+diff -u melodic-desktop-full.rosinstall melodic-desktop-full.rosinstall.old
+```
+
+И если изменения будут нас устраивать, то обновим:
+
+```bash
  vcs import src < melodic-desktop-full.rosinstall
- Далее пересобираем рабочее окружение:
+```
+
+Далее пересобираем рабочее окружение:
+
+```bash
  ./src/catkin/bin/catkin_make_isolated --install
- И снова добавляем source:
- source ~/ros_catkin_ws/install_isolated/setup.bash
+```
+
+И снова добавляем source:
+
+```bash
+source ~/ros_catkin_ws/install_isolated/setup.bash
+```
 
 ----------------
 
@@ -196,3 +250,11 @@ rosinstall_generator desktop_full --rosdistro melodic --deps --tar > melodic-des
 ![Git push2](https://raw.githubusercontent.com/Nelson789/4_labs_for_system/master/lab2/Screenshot%20from%202020-06-19%2013-12-18.png)
 Смотрим итоговые логи
 ![Git Log3](https://raw.githubusercontent.com/Nelson789/4_labs_for_system/master/lab2/Screenshot%20from%202020-06-19%2013-12-29.png)
+
+----------
+## Проверяем работу скрипта
+Удаляем ROS из нашего дистрибутива Ubuntu и пробуем его установить лишь с использованием ранее созданного скрипта
+
+![Install ROS using Script](https://raw.githubusercontent.com/Nelson789/4_labs_for_system/master/lab2/Screenshot%20from%202020-06-19%2012-54-54.png)
+
+![Install2 ROS using Script](https://raw.githubusercontent.com/Nelson789/4_labs_for_system/master/lab2/Screenshot%20from%202020-06-19%2012-55-07.png)

@@ -181,9 +181,18 @@ rosinstall_generator desktop_full --rosdistro melodic --deps --tar > melodic-des
 --------
 
 В итоге по указанным выше командам собираем bash-скрипт и отправляем его в данный репозиторий, незабывая указать глобальные параметры для Git.
-
+Создаем скрипт в редакторе Nano ввиду его небольших размеров
 ![Script in nano](https://raw.githubusercontent.com/Nelson789/4_labs_for_system/master/lab2/Screenshot%20from%202020-06-19%2013-03-07.png)
-
+Добавим глобальные параметры для Git
 ![Глобальные параметры Git](https://raw.githubusercontent.com/Nelson789/4_labs_for_system/master/lab2/Screenshot%20from%202020-06-19%2013-05-17.png)
-
+Смотрим логи после добавления репозитория
 ![Log Git](https://raw.githubusercontent.com/Nelson789/4_labs_for_system/master/lab2/Screenshot%20from%202020-06-19%2013-02-34.png)
+
+Делаем коммит и пуш в удаленный репозиторий для добавления созданного скрипта
+![Git push](https://raw.githubusercontent.com/Nelson789/4_labs_for_system/master/lab2/Screenshot%20from%202020-06-19%2013-06-17.png)
+Смотрим логи
+![Git Log2](https://raw.githubusercontent.com/Nelson789/4_labs_for_system/master/lab2/Screenshot%20from%202020-06-19%2013-06-30.png)
+Создадим отдельную папку lab2 под созданный скрипт и перенесем его в данную папку, а затем выполним коммит и пуш для добавления изменений в удаленный репозиторий
+![Git push2](https://raw.githubusercontent.com/Nelson789/4_labs_for_system/master/lab2/Screenshot%20from%202020-06-19%2013-12-18.png)
+Смотрим итоговые логи
+![Git Log3](https://raw.githubusercontent.com/Nelson789/4_labs_for_system/master/lab2/Screenshot%20from%202020-06-19%2013-12-29.png)

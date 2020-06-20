@@ -27,32 +27,15 @@ cat ~/.ssh/id_rsa.pub
 ssh -vT git@github.com
 ```
 
-В соответствии с этим, при необходимости работы от root-пользователя, ему также потребуется добавить созданный SSH-ключ для доступа к аккаунту GitHub.
+В соответствии с этим, при необходимости работы от root-пользователя, ему также потребуется добавить созданный SSH-ключ для доступа к аккаунту GitHub. Можно выполнить ряд команд для обновления и вывода информации о дистрибутиве и пакетах.
 
 ```bash
 # обновим дистрибутив, зависимости и пакеты
-echo "\033[32m Update system packages and dependencies:\033[0m"
 sudo apt-get -y update && apt-get -y dist-upgrade
-
 # выведем информацию о системе и версиях ПО
-echo "\033[32m    System information and soft versions"
 cat /etc/os-release
 arch
-python3 -V
-
-# по умолчанию в Ubuntu 20.2 установлен python3.8, который вызывается в терминале через симлинк python3, но для удобства установим его как python
-sudo ln -s  /usr/bin/python3.8 /usr/bin/python
-
-# установим пакетный менеджер pip и систему контроля версий git
-sudo apt-get install python3-pip 
-sudo apt-get install git
-
-# вызов pip сделаем также через команду pip, а не pip3
-# как и в случае python создадим дополнительный симлинк
-sudo ln -s  /usr/bin/pip3 /usr/bin/pip
-
-# смотрим информацию о дистрибутиве после обновления и о версиях ПО
-cat /etc/os-release
+# смотрим информацию о версиях ПО
 python -V
 pip -V
 git --version
@@ -60,35 +43,71 @@ git --version
 
 -------
 
-Установка через пакетный менеджер apt:
-1. Добавим репозиторий с нужными нам пакетами ros
+## Установка через пакетный менеджер apt
+
+Добавим репозиторий с нужными нам пакетами ros
+
+```bash
 sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
+```
 
-2. Добавим ключ для доступа
+Добавим ключ для доступа
+
+```bash
 sudo apt-key adv --keyserver 'hkp://keyserver.ubuntu.com:80' --recv-key C1CF6E31E6BADE8868B172B4F42ED6FBAB17C654
+```
 
-3. Обновим зависимости
+Обновим зависимости
+
+```bash
 sudo apt-get update
+```
 
-4. Ввиду того, что мы используем Ubuntu 18.4 bionic возможно установить пакет melodic:
+**Установка ROS**
+Ввиду того, что мы используем Ubuntu 18.4 bionic возможно установить пакет melodic:
+
+```bash
+# installs ROS package, build and communication libraries
 sudo apt install ros-melodic-ros-base
+# installs ROS Base, rqt, rviz and robot-generic libraries
 sudo apt install ros-melodic-desktop
+# installs everything of ROS Desktop option plus 2D/3D simulators and 2D/3D perception (if you want to simulate using Gazebo)
 sudo apt install ros-melodic-desktop-full
+```
 
-5. Конфигурируем окружение
-ROS была установлена в /opt/ros/<distro> (в данном случае в /opt/ros/melodic). Для более удобного выполнения команд из терминала, необходимо добавить в оболочку путь к директории ROS:
+**Конфигурируем окружение**
+ROS была установлена в `/opt/ros/<distro>` (в данном случае в `/opt/ros/melodic`). Для более удобного выполнения команд из терминала, необходимо добавить в оболочку путь к директории ROS:
+
+```bash
 source /opt/ros/melodic/setup.bash
-Но, чтобы этого не пришлось делать каждый раз после перезапуска, добавим соответствующий ярлык в файл "/home/<user>/.bashrc" следующим образом: 
-echo "source /opt/ros/melodic/setup.bash" >> ~/.bashrc
+```
 
-6. Проверяем установку:
+Но, чтобы этого не пришлось делать каждый раз после перезапуска, добавим соответствующий ярлык в файл `/home/<user>/.bashrc` следующим образом: 
+
+```bash
+echo "source /opt/ros/melodic/setup.bash" >> ~/.bashrc
+```
+
+**Проверяем установку**
 Сделаем команды ROS доступными выполнив source из .bashrc:
+
+```bash
 source ~/.bashrc
+```
+
 Запускаем roscore:
+
+```bash
 roscore
+```
+
 Откроем новый терминал и выполним команду:
+
+```bash
 rosnode list
-В результате получим /rosout - теперь мы имеем установленный ROS. 
+```
+
+В результате получим `/rosout` - теперь мы имеем установленный ROS. 
 
 -------------
 

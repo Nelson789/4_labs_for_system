@@ -56,11 +56,11 @@ else
 	source ~/.bashrc
 fi
 
+echo -ne "\033[32mЗапустить roscore? (y/n): \033[0m" && read ans
 if [[ ${ans} == 'y' ]]; then
 	echo "Запуск roscore"
 	roscore
 else
-	echo "Для запуска используйте утилиту roscore в терминале"
+	echo -e "\033[32mУстановка завершена\033[0m"
+	echo "Для запуска используйте команду roscore"
 fi
-
-echo -e "\033[32mУстановка завершена\033[0m"

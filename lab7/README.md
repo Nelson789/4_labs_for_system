@@ -14,3 +14,18 @@ https://u.cs.biu.ac.il/~yehoshr1/89-685/
 
 https://player-stage-manual.readthedocs.io/en/stable/WORLDFILES/
 
+Результаты работы
+
+![01](https://raw.githubusercontent.com/Nelson789/4_labs_for_system/master/lab7/Screenshot%20from%202020-06-22%2003-48-39.png)
+
+![02](https://raw.githubusercontent.com/Nelson789/4_labs_for_system/master/lab7/Screenshot%20from%202020-06-22%2003-49-47.png)
+
+![03](https://raw.githubusercontent.com/Nelson789/4_labs_for_system/master/lab7/Screenshot%20from%202020-06-22%2004-01-26.png)
+
+![04](https://raw.githubusercontent.com/Nelson789/4_labs_for_system/master/lab7/Screenshot%20from%202020-06-22%2005-27-24.png)
+
+![05](https://raw.githubusercontent.com/Nelson789/4_labs_for_system/master/lab7/Screenshot%20from%202020-06-22%2005-28-01.png)
+
+![06](https://raw.githubusercontent.com/Nelson789/4_labs_for_system/master/lab7/Screenshot%20from%202020-06-22%2005-33-57.png)
+
+![07](https://raw.githubusercontent.com/Nelson789/4_labs_for_system/master/lab7/Screenshot%20from%202020-06-22%2005-34-33.png)

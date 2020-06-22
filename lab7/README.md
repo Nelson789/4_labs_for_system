@@ -16,7 +16,7 @@ https://player-stage-manual.readthedocs.io/en/stable/WORLDFILES/
 
 ## Запуск программы
 
-Перед запуском необходимо в stage_ros/world добавить файлы haonan.pgm и haonan.world
+Перед запуском необходимо установить требуемые пакеты в соответствии с представленными выше туториалами, и в stage_ros/world добавить файлы haonan.pgm и haonan.world
 Затем нужно выполнить roscore и во втором терминале:
 ```
 rosrun stage_ros stageros $(rospack find stage_ros)/world/haonan.world

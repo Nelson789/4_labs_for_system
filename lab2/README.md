@@ -9,10 +9,13 @@
 
 ```
 cd <work_dir>  # перейти в рабочую директорию 
-git clone https://github.com/Nelson789/4_labs_for_system.git   # получить файлы из репозитория
+sudo git clone https://github.com/Nelson789/4_labs_for_system.git   # получить файлы из репозитория
 # перейти в директорию лабораторной работы 2
-cd 
-
+cd 4_labs_for_system/lab2
+# делаем файл исполняемым
+sudo chmod +x install_ros.sh
+# запускаем
+./install_ros.sh
 ```
 
 -------

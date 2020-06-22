@@ -14,6 +14,17 @@ https://u.cs.biu.ac.il/~yehoshr1/89-685/
 
 https://player-stage-manual.readthedocs.io/en/stable/WORLDFILES/
 
+## Запуск программы
+
+Перед запуском необходимо в stage_ros/world добавить файлы haonan.pgm и haonan.world
+Затем нужно выполнить roscore и во втором терминале:
+```
+rosrun stage_ros stageros $(rospack find stage_ros)/world/haonan.world
+cd <base_dir>/lab7
+python3 robot_move.py
+```
+
+
 Результаты работы
 
 ![01](https://raw.githubusercontent.com/Nelson789/4_labs_for_system/master/lab7/Screenshot%20from%202020-06-22%2003-48-39.png)

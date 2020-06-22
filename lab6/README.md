@@ -16,6 +16,8 @@ rosrun turtlesim turtlesim_node
 
 ## Запуск программы:
 
+Перед запуском необходимо в пакет turtlesim в ros (как правило, расположен в  /opt/ros/melodic/share/turtlesim) добавить скрипты move.py и rotate.py, которые находятся в директории turtlesim, а затем запустить roscore, turtlesim_node и скрипт.
+
 ```bash
 cd <base_dir>/lab6  # перейти в директорию с файлами работы
 roscore # в первом терминале запускаем ros

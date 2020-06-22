@@ -21,7 +21,7 @@ https://player-stage-manual.readthedocs.io/en/stable/WORLDFILES/
 ```
 rosrun stage_ros stageros $(rospack find stage_ros)/world/haonan.world
 cd <base_dir>/lab7
-python3 robot_move.py
+python robot_move.py
 ```
 
 

@@ -14,6 +14,17 @@ http://wiki.ros.org/turtlesim/Tutorials/Rotating%20Left%20and%20Right
 rosrun turtlesim turtlesim_node
 ```
 
+## Запуск программы:
+
+Перед запуском необходимо в пакет turtlesim в ros (как правило, расположен в  /opt/ros/melodic/share/turtlesim) добавить скрипты move.py и rotate.py, которые находятся в директории turtlesim, а затем запустить roscore, turtlesim_node и скрипт.
+
+```bash
+cd <base_dir>/lab6  # перейти в директорию с файлами работы
+roscore # в первом терминале запускаем ros
+rosrun turtlesim turtlesim_node # во втором терминале запускаем turtlesim
+./print227906 # запускаем скрипт в третьем терминале, чтобы начертить номер ИСУ
+```
+
 Результат представлен на изображении ниже
 
 ![Результат отрисовки](https://raw.githubusercontent.com/Nelson789/4_labs_for_system/master/lab6/Screenshot%20from%202020-06-20%2009-02-35.png)

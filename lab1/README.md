@@ -37,7 +37,7 @@ cd <lab1_dir>
 
 Нажмите на Gif ниже, чтобы открыть видео в плеере
 
-[![Video Demo](https://raw.githubusercontent.com/artif467/dev-notes/master/lab1%20(1).gif?token=AE5L3NG7P2ZSLJUOC7PCLE266MIJ2)](https://yadi.sk/i/ITrcNE-gQyGUmg)
+[![Video Demo](https://raw.githubusercontent.com/Nelson789/4_labs_for_system/master/lab1/lab1.gif)](https://yadi.sk/i/ITrcNE-gQyGUmg)
 
 ## Скриншоты
 

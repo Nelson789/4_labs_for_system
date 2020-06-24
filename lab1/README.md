@@ -33,6 +33,12 @@ cd <lab1_dir>
 ./files_info.sh
 ```
 
+## Демонстрация работы скрипта
+
+Нажмите на Gif ниже, чтобы открыть видео в плеере
+
+[![Video Demo](https://raw.githubusercontent.com/artif467/dev-notes/master/lab1%20(1).gif?token=AE5L3NG7P2ZSLJUOC7PCLE266MIJ2)](https://yadi.sk/i/ITrcNE-gQyGUmg)
+
 ## Скриншоты
 
 ![01](https://raw.githubusercontent.com/Nelson789/4_labs_for_system/master/lab1/Screenshot%20from%202020-06-23%2011-09-52.png)

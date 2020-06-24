@@ -25,7 +25,13 @@ python robot_move.py
 ```
 
 
-Результаты работы
+## Демонстрация работы скрипта
+
+Нажмите на Gif ниже, чтобы открыть видео в плеере
+
+[![Video Demo](https://github.com/Nelson789/4_labs_for_system/blob/master/lab7/lab7.gif?raw=true)](https://yadi.sk/i/bA82osoXmuapfQ)
+
+## Результаты работы
 
 ![01](https://raw.githubusercontent.com/Nelson789/4_labs_for_system/master/lab7/Screenshot%20from%202020-06-22%2003-48-39.png)
 
